@@ -11,7 +11,7 @@ export class PetApiService {
 
   }
   getPets() {
-    return this.http.get('http://api.petfinder.com/pet.getRandom?key=3939b919821a55b16a67e70e0c97ea7b&callback=?format=json')
+    return this.http.get('http://api.petfinder.com/pet.getRandom?key=3939b919821a55b16a67e70e0c97ea7b&format=json&output=full')
     .map((res: Response) => res.json());
   }
 
