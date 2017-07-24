@@ -7,7 +7,7 @@ import { PetfinderComponent } from './petfinder/petfinder.component';
 import { PetApiService } from './shared/pet-api.service';
 
 import { AgmCoreModule } from '@agm/core';
-import { MdCardModule } from '@angular/material';
+import { MdCardModule, MdButtonModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -19,6 +19,7 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     MdCardModule,
+    MdButtonModule,
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDIQU8x47c0UFMLtyOa5R83l0kp-njiMSY'

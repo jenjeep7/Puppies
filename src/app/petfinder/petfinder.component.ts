@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PetApiService } from '../shared/pet-api.service';
+import { MdCardModule, MdButtonModule } from '@angular/material';
 
 @Component({
   selector: 'app-petfinder',
