@@ -3,5 +3,6 @@
 </p>
 <div>
     <button (click)="getPets()">Find Pets</button>
-    {{ profile | json }}
+    <!-- totally hacked this to get to profile photo.  definitely not ideal -->
+   <img src="{{ petProfiles.media.photos.photo[0].$t }}"> 
   </div>
