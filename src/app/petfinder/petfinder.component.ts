@@ -13,8 +13,8 @@ export class PetfinderComponent implements OnInit {
   petProfiles = {};
 
     getPets() {
-      this.PetApiService.getPets().subscribe(data => this.petProfiles = data.petfinder.pet);
-      console.log(this.petProfiles);
+      this.PetApiService.getPets().subscribe(data => this.petProfiles = data.petfinder.pet.media.photos.photo[0].$t);
+      // console.log(this.petProfiles);
     }
 
 
