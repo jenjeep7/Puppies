@@ -1,8 +1,17 @@
-<p>
-Random Pet Up For Adoption
-</p>
-<div>
-    <button md-raised-button (click)="getPets()">Find Pets</button>
-    <!-- totally hacked this to get to profile photo.  definitely not ideal -->
-   <img src="{{ petProfiles }}"> 
-  </div>
+
+
+
+ <md-card>
+   <md-card-title>
+     Random Pet Up For Adoption
+
+   </md-card-title>
+    <md-card-content>
+         <img src="{{ petProfiles }}"> 
+
+    </md-card-content>
+   <md-card-actions>
+     <button md-raised-button (click)="getPets()">Find Pets</button>
+   </md-card-actions>
+</md-card>
+    
