@@ -1,26 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
+import { RouterModule, Routes } from '@angular/router';
 
+// components
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { PetfinderComponent } from './petfinder/petfinder.component';
+
+// services
 import { PetApiService } from './shared/pet-api.service';
 
-import { AgmCoreModule } from '@agm/core';
+// material
 import { MdCardModule, MdButtonModule } from '@angular/material';
-import { HttpModule } from '@angular/http';
+
+const appRoutes: Routes = [
+// list of all the routes
+  { path: 'pet-finder', component: PetfinderComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    PetfinderComponent
+    PetfinderComponent,
+    
   ],
   imports: [
     BrowserModule,
     MdCardModule,
     MdButtonModule,
     HttpModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } //for debugging
+    ),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDIQU8x47c0UFMLtyOa5R83l0kp-njiMSY'
     })
