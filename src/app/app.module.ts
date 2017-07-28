@@ -18,7 +18,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 
 const appRoutes: Routes = [
 // list of all the routes
-  { path: 'pet-finder', component: PetfinderComponent }
+  { path: 'pet-finder', component: PetfinderComponent },
+  { path: 'app-map', component: MapComponent }
 ];
 
 @NgModule({

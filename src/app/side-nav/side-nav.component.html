@@ -2,8 +2,17 @@
   <md-sidenav #sidenav mode="side" opened="true">
 
     <p>sidenav working</p>
+
+    <a routerLink="/pet-finder" routerLinkActive="active">Pet Finder</a>
+        <a routerLink="/app-map" routerLinkActive="active">Pet Finder</a>
+
   </md-sidenav>
   <button md-mini-fab (click)="sidenav.toggle()">Open</button>
 
   <p>All the cool stuff goes in here</p>
+
+<router-outlet></router-outlet>
+
 </md-sidenav-container>
+
+
