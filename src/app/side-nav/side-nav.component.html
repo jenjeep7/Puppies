@@ -1,18 +1,25 @@
 <md-sidenav-container class="sidenav-container">
-  <md-sidenav #sidenav mode="side" opened="true">
+  <md-sidenav #sidenav mode="side" opened="false">
 
-    <p>sidenav working</p>
+    <h2>Getting Around</h2>
 
-    <a routerLink="/pet-finder" routerLinkActive="active">Pet Finder</a>
+    <md-list>
+      <md-list-item>
+        <a routerLink="/pet-finder" routerLinkActive="active">Pet Finder</a>
+      </md-list-item>
+      <md-list-item>
         <a routerLink="/app-map" routerLinkActive="active">Pet Finder</a>
+      </md-list-item>
+
+
+    </md-list>
+
 
   </md-sidenav>
   <button md-mini-fab (click)="sidenav.toggle()">Open</button>
 
   <p>All the cool stuff goes in here</p>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
 </md-sidenav-container>
-
-
