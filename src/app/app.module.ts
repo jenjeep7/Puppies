@@ -13,8 +13,14 @@ import { PetfinderComponent } from './petfinder/petfinder.component';
 import { PetApiService } from './shared/pet-api.service';
 
 // material
-import { MdCardModule, MdButtonModule , MdSidenavModule, MdListModule} from '@angular/material';
+import { MdCardModule, 
+        MdButtonModule, 
+        MdSidenavModule, 
+        MdListModule,
+        MdIconModule 
+      } from '@angular/material';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
 // list of all the routes
@@ -28,6 +34,7 @@ const appRoutes: Routes = [
     MapComponent,
     PetfinderComponent,
     SideNavComponent,
+    HeaderComponent,
     
   ],
   imports: [
@@ -36,6 +43,7 @@ const appRoutes: Routes = [
     MdButtonModule,
     MdSidenavModule,
     MdListModule,
+    MdIconModule,
     HttpModule,
     RouterModule.forRoot(
       appRoutes,
