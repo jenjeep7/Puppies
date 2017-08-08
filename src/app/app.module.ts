@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { PetfinderComponent } from './petfinder/petfinder.component';
+import { ErrorViewComponent } from './../errors/error-view/error-view.component';
+
 
 // services
 import { PetApiService } from './shared/pet-api.service';
@@ -21,11 +23,14 @@ import { MdCardModule,
       } from '@angular/material';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { HeaderComponent } from './header/header.component';
+import { RandomGifComponent } from './random-gif/random-gif.component';
 
 const appRoutes: Routes = [
 // list of all the routes
   { path: 'pet-finder', component: PetfinderComponent },
-  { path: 'app-map', component: MapComponent }
+  { path: 'app-map', component: MapComponent },
+  { path: 'app-random-gif', component: RandomGifComponent},
+  { path: '', component: MapComponent}
 ];
 
 @NgModule({
@@ -35,6 +40,8 @@ const appRoutes: Routes = [
     PetfinderComponent,
     SideNavComponent,
     HeaderComponent,
+    ErrorViewComponent,
+    RandomGifComponent
     
   ],
   imports: [
