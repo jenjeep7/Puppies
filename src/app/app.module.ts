@@ -13,13 +13,15 @@ import { ErrorViewComponent } from './../errors/error-view/error-view.component'
 
 // services
 import { PetApiService } from './shared/pet-api.service';
+import { RandomGifService } from './shared/random-gif.service';
 
 // material
 import { MdCardModule, 
         MdButtonModule, 
         MdSidenavModule, 
         MdListModule,
-        MdIconModule 
+        MdIconModule, 
+        MdIconRegistry
       } from '@angular/material';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { HeaderComponent } from './header/header.component';
@@ -60,7 +62,7 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyDIQU8x47c0UFMLtyOa5R83l0kp-njiMSY'
     })
   ],
-  providers: [PetApiService],
+  providers: [PetApiService, MdIconRegistry, RandomGifService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

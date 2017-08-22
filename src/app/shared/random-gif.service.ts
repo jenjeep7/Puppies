@@ -15,8 +15,7 @@ export class RandomGifService {
   //   headers.append('Access-Control-Allow-Origin', '*');
   //   this.Apiheader = headers;
   // }
-  getGif() {    return this.http.get('https://api.giphy.com/v1/gifs/random?api_key=07f89521d9bf46ceb34f27afc09fde9e&tag=Puppy&rating=G'
-)
+  getGif() { return this.http.get('https://api.giphy.com/v1/gifs/random?api_key=07f89521d9bf46ceb34f27afc09fde9e&tag=Puppy&rating=G')
 
       .map((res: Response) => res.json());
   }

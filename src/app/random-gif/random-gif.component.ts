@@ -12,10 +12,10 @@ export class RandomGifComponent implements OnInit {
 
   constructor(private RandomGifService: RandomGifService) { }
 
-  randomGif = {};
+  public randomGif = {};
   
 getPuppyGif() {
-      this.RandomGifService.getGif().subscribe(data => this.randomGif = data);
+      this.RandomGifService.getGif().subscribe(s => this.randomGif = s.data);
       console.log(this.randomGif);
     }
 

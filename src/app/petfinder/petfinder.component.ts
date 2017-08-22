@@ -8,6 +8,11 @@ import { MdCardModule, MdButtonModule } from '@angular/material';
   styleUrls: ['./petfinder.component.css']
 })
 export class PetfinderComponent implements OnInit {
+  
+  
+  // api key for giphy
+
+  // 07f89521d9bf46ceb34f27afc09fde9e
 
   constructor(private PetApiService: PetApiService) { }
 
